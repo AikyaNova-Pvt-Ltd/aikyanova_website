@@ -6,9 +6,43 @@
 <title>AikyaNova — Home</title>
 <meta name="description" content="AikyaNova is a deep-tech company building bio-innovation, molecular intelligence, applied AI systems, and advanced training at the intersection of biology, engineering, and artificial intelligence." />
 <link rel="canonical" href="https://www.aikyanova.com/">
-<link rel="stylesheet" href="styles.css" />
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+          display: ['Space Grotesk', 'Inter', 'ui-sans-serif', 'system-ui'],
+        },
+        colors: {
+          brand: '#0ea5e9',
+          brandDark: '#2563eb',
+          ink: '#0f1b2d',
+        },
+        boxShadow: {
+          floating: '0 20px 50px rgba(8,44,94,.18)',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  body {
+    background: radial-gradient(circle at 20% 20%, rgba(14,165,233,.08), transparent 26%), radial-gradient(circle at 80% 10%, rgba(37,99,235,.08), transparent 24%), linear-gradient(180deg, #f8fbff 0%, #eef2fb 55%, #f8fbff 100%);
+  }
+  .glass {
+    background: rgba(255,255,255,.86);
+    backdrop-filter: blur(12px);
+  }
+  .hero-bg {
+    background-image: linear-gradient(120deg, rgba(5,26,56,.82) 0%, rgba(11,74,128,.62) 45%, rgba(14,165,233,.18) 100%), url('https://images.unsplash.com/photo-1581092334607-22db0f01879a?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+  }
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -21,138 +55,159 @@
 }
 </script>
 </head>
-<body>
-<div class="container">
-<div class="box">
-<div class="header">
-<div class="brand">
-<img src="logo_2.png" alt="AikyaNova logo"/>
-<div>
-<h1>AikyaNova</h1>
-<div class="tag">Innovation at the Intersection</div>
-</div>
-</div>
-</div>
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="team.html">Team</a>
-<a href="careers.html">Careers</a>
-<a href="students.html">Students Corner</a>
-<a href="news.html">News</a>
-<a href="contact.html">Contact</a>
-</nav>
+<body class="min-h-screen text-ink font-sans antialiased">
+<div class="min-h-screen flex flex-col">
 
-<div class="main">
-<section class="hero visual">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="inline-badge"><span></span>Deep-tech bioinnovation & applied AI systems</div>
-    <h2>Synergizing Biology, Engineering, and Applied AI for resilient Healthcare, outcome-based Education, and future-ready Industries</h2>
-    <p class="lead">From research to real-world deployment, we build multi-domain DeepTech platforms from precision diagnostics and therapeutic innovation for healthcare to applied AI systems that strengthen education, workforce development, and institutional intelligence.</p>
-    <div class="cta">
-      <a class="button" href="about.html">Discover our story</a>
-      <a class="button secondary" href="mailto:aikyanova@gmail.com?subject=Partnership%20Inquiry">Partner with us</a>
+  <header class="sticky top-0 z-30 glass border-b border-slate-200 shadow">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="logo_2.png" alt="AikyaNova logo" class="h-12 w-12 rounded-xl shadow-md">
+        <div>
+          <h1 class="text-xl font-display font-bold tracking-tight">AikyaNova</h1>
+          <div class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Innovation at the Intersection</div>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-2 text-sm font-semibold">
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="index.html">Home</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="about.html">About</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="team.html">Team</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="careers.html">Careers</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="students.html">Students Corner</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="news.html">News</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="contact.html">Contact</a>
+      </nav>
+      <div class="md:hidden">
+        <button aria-label="Open navigation" class="px-3 py-2 rounded-lg border border-slate-200 bg-white shadow-sm text-slate-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
     </div>
-  </div>
-</section>
+    <nav class="md:hidden border-t border-slate-200 px-4 pb-3 flex flex-wrap gap-2 bg-white/85 backdrop-blur">
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="index.html">Home</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="about.html">About</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="team.html">Team</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="careers.html">Careers</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="students.html">Students Corner</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="news.html">News</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<div class="stats">
-<div class="stat"><strong>10+</strong><span>Research domains</span></div>
-<div class="stat"><strong>3</strong><span>Active prototypes</span></div>
-<div class="stat"><strong>2</strong><span>AI enabled Platforms</span></div>
-<div class="stat"><strong>6</strong><span>Collaborations</span></div>
-</div>
+  <main class="flex-1 w-full">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 lg:py-14 space-y-10">
 
-<h2>Where synergy brings impact</h2>
-<p class="lead">AikyaNova unites bio-engineering, intelligent sensing, molecular intelligence, and applied AI to develop platforms ready for the clinic, classroom, and field. We build with rigor, evidence, and empathy for patients, learners, and practitioners alike.</p>
+      <section class="relative overflow-hidden rounded-2xl lg:rounded-3xl hero-bg text-white shadow-floating">
+        <div class="relative p-6 lg:p-10 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-white/15 text-xs font-bold tracking-wide uppercase border border-white/20 shadow">
+            <span class="h-2 w-2 rounded-full bg-gradient-to-r from-brand to-brandDark"></span>
+            Deep-tech bioinnovation & applied AI systems
+          </div>
+          <h2 class="text-3xl lg:text-4xl font-display font-semibold leading-tight">Synergizing Biology, Engineering, and Applied AI for resilient Healthcare, outcome-based Education, and future-ready Industries</h2>
+          <p class="text-lg lg:text-xl text-slate-100/90">From research to real-world deployment, we build multi-domain DeepTech platforms from precision diagnostics and therapeutic innovation for healthcare to applied AI systems that strengthen education, workforce development, and institutional intelligence.</p>
+          <div class="flex flex-wrap gap-3 pt-1">
+            <a class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-brand to-brandDark text-white font-semibold shadow-lg shadow-sky-500/25 transition hover:-translate-y-0.5" href="about.html">Discover our story</a>
+            <a class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/90 text-brandDark font-bold border border-white/70 shadow-md transition hover:-translate-y-0.5" href="mailto:aikyanova@gmail.com?subject=Partnership%20Inquiry">Partner with us</a>
+          </div>
+        </div>
+      </section>
 
-<div class="feature-grid">
-<article class="feature-card">
-  <figure class="feature-media">
-    <img src="https://image.pollinations.ai/prompt/ultra%20detailed%20futuristic%20biosensor%20laboratory%20digital%20art%20soft%20light?width=900&height=700" alt="AI-generated futuristic biosensing lab rendered in luminous digital art" loading="lazy">
-  </figure>
-  <div class="feature-content">
-    <h3>Biomedical Sensing, Diagnostics & Therapeutic Devices</h3>
-    <p>
+      <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="glass border border-slate-200 rounded-2xl px-5 py-6 shadow-floating">
+          <div class="text-3xl font-bold text-ink">10+</div>
+          <div class="text-xs uppercase tracking-wide text-slate-500 font-semibold">Research domains</div>
+        </div>
+        <div class="glass border border-slate-200 rounded-2xl px-5 py-6 shadow-floating">
+          <div class="text-3xl font-bold text-ink">3</div>
+          <div class="text-xs uppercase tracking-wide text-slate-500 font-semibold">Active prototypes</div>
+        </div>
+        <div class="glass border border-slate-200 rounded-2xl px-5 py-6 shadow-floating">
+          <div class="text-3xl font-bold text-ink">2</div>
+          <div class="text-xs uppercase tracking-wide text-slate-500 font-semibold">AI enabled Platforms</div>
+        </div>
+        <div class="glass border border-slate-200 rounded-2xl px-5 py-6 shadow-floating">
+          <div class="text-3xl font-bold text-ink">6</div>
+          <div class="text-xs uppercase tracking-wide text-slate-500 font-semibold">Collaborations</div>
+        </div>
+      </section>
+
+      <section class="glass border border-slate-200 rounded-2xl shadow-floating p-6 lg:p-8 space-y-3">
+        <h2 class="text-3xl font-display font-semibold text-ink">Where synergy brings impact</h2>
+        <p class="text-lg text-slate-700">AikyaNova unites bio-engineering, intelligent sensing, molecular intelligence, and applied AI to develop platforms ready for the clinic, classroom, and field. We build with rigor, evidence, and empathy for patients, learners, and practitioners alike.</p>
+      </section>
+
+      <section class="grid gap-6 md:grid-cols-2">
+        <article class="glass border border-slate-200 rounded-2xl shadow-floating overflow-hidden flex flex-col">
+          <figure class="h-56 w-full overflow-hidden">
+            <img src="https://image.pollinations.ai/prompt/ultra%20detailed%20futuristic%20biosensor%20laboratory%20digital%20art%20soft%20light?width=900&height=700" alt="AI-generated futuristic biosensing lab rendered in luminous digital art" loading="lazy" class="h-full w-full object-cover transition duration-500 hover:scale-105">
+          </figure>
+          <div class="p-6 space-y-3">
+            <h3 class="text-xl font-display font-semibold text-ink">Biomedical Sensing, Diagnostics & Therapeutic Devices</h3>
+            <p class="text-slate-600">
       We develop next-generation diagnostic and therapeutic devices. Our sensors detect cancer biomarkers, microbial contamination, and food adulteration with high precision. Our therapeutic technologies seamlessly bridge nanotechnology with medical applications, enabling targeted and effective intervention. These handheld, compact, and cost-effective solutions are proudly engineered and manufactured in India
-    </p>
-  </div>
-</article>
-<article class="feature-card">
-  <figure class="feature-media">
-    <img src="https://image.pollinations.ai/prompt/cinematic%20molecular%20computing%20core%20glowing%20ai%20neurons%20digital%20art?width=900&height=700" alt="AI-generated molecular computing core with glowing AI neurons" loading="lazy">
-  </figure>
-  <div class="feature-content">
-    <h3>AI-Accelerated Drug Discovery Pipelines</h3>
-    <p>
+            </p>
+          </div>
+        </article>
+
+        <article class="glass border border-slate-200 rounded-2xl shadow-floating overflow-hidden flex flex-col">
+          <figure class="h-56 w-full overflow-hidden">
+            <img src="https://image.pollinations.ai/prompt/cinematic%20molecular%20computing%20core%20glowing%20ai%20neurons%20digital%20art?width=900&height=700" alt="AI-generated molecular computing core with glowing AI neurons" loading="lazy" class="h-full w-full object-cover transition duration-500 hover:scale-105">
+          </figure>
+          <div class="p-6 space-y-3">
+            <h3 class="text-xl font-display font-semibold text-ink">AI-Accelerated Drug Discovery Pipelines</h3>
+            <p class="text-slate-600">
        We develop advanced AI-driven discovery engines that shorten the journey from molecule to medicine.
        By integrating predictive modeling, generative chemistry, toxicology, docking, and MD simulations, 
        we enable rapid screening and optimization of promising compounds for complex biological targets.
-    </p>
-  </div>
-</article>
-<article class="feature-card">
-  <figure class="feature-media">
-    <img src="https://image.pollinations.ai/prompt/futuristic%20ai%20education%20ecosystem%20students%20teachers%20digital%20interfaces%20soft%20light%20art?width=900&height=700"
-         alt="AI-generated futuristic applied AI ecosystem for education" loading="lazy">
-  </figure>
-  <div class="feature-content">
-    <h3>Applied AI platforms for education & institutions</h3>
-    <p>
+            </p>
+          </div>
+        </article>
+
+        <article class="glass border border-slate-200 rounded-2xl shadow-floating overflow-hidden flex flex-col">
+          <figure class="h-56 w-full overflow-hidden">
+            <img src="https://image.pollinations.ai/prompt/futuristic%20ai%20education%20ecosystem%20students%20teachers%20digital%20interfaces%20soft%20light%20art?width=900&height=700"
+                 alt="AI-generated futuristic applied AI ecosystem for education" loading="lazy" class="h-full w-full object-cover transition duration-500 hover:scale-105">
+          </figure>
+          <div class="p-6 space-y-3">
+            <h3 class="text-xl font-display font-semibold text-ink">Applied AI platforms for education & institutions</h3>
+            <p class="text-slate-600">
       We build intelligent AI systems that enhance learning, evaluation, and institutional decision-making. 
       Our platforms combine analytics, automation, and natural language understanding to deliver smarter assessments, personalized insights, and streamlined academic operations. 
       These solutions enable universities and organizations to improve efficiency, transparency, and educational outcomes powered by advanced AI developed in India.
-    </p>
-  </div>
-</article>
-<article class="feature-card">
-  <figure class="feature-media">
-    <img src="https://image.pollinations.ai/prompt/futuristic%20deeptech%20academy%20people%20collaborating%20holographic%20interfaces%20digital%20art?width=900&height=700" alt="AI-generated futuristic training session with holographic collaboration" loading="lazy">
-  </figure>
-  <div class="feature-content">
-    <h3>Advanced DeepTech training & global certifications</h3>
-    <p>
+            </p>
+          </div>
+        </article>
+
+        <article class="glass border border-slate-200 rounded-2xl shadow-floating overflow-hidden flex flex-col">
+          <figure class="h-56 w-full overflow-hidden">
+            <img src="https://image.pollinations.ai/prompt/futuristic%20deeptech%20academy%20people%20collaborating%20holographic%20interfaces%20digital%20art?width=900&height=700" alt="AI-generated futuristic training session with holographic collaboration" loading="lazy" class="h-full w-full object-cover transition duration-500 hover:scale-105">
+          </figure>
+          <div class="p-6 space-y-3">
+            <h3 class="text-xl font-display font-semibold text-ink">Advanced DeepTech training & global certifications</h3>
+            <p class="text-slate-600">
       We provide industry-focused deep-tech training that blends hands-on research with real-world applications in AI, 
       biotechnology, and medical engineering. Our programs offer practical experience in advanced tools, lab technologies, 
       and computational workflows, supported by globally relevant certifications. Designed for students, researchers, and professionals, 
       our training ecosystem builds the next generation of innovators ready for high-impact careers in science and technology.
-    </p>
-  </div>
-</article>
-</div>
+            </p>
+          </div>
+        </article>
+      </section>
 
-<h2>What it looks like in action</h2>
-<p class="lead">Laboratory discovery, sensing validation, and applied AI pilots—captured from our workbench to deployment.</p>
-<div class="visual-grid">
-  <figure class="visual-card" style="--img:url('https://images.unsplash.com/photo-1581093458791-9a1c86eb6ffe?auto=format&fit=crop&w=1200&q=80')">
-    <figcaption>Wet-lab discovery and assay development</figcaption>
-  </figure>
-  <figure class="visual-card" style="--img:url('https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1200&q=80')">
-    <figcaption>Precision sensing and signal tuning</figcaption>
-  </figure>
-  <figure class="visual-card" style="--img:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80')">
-    <figcaption>Applied AI engineering sprints</figcaption>
-  </figure>
-  <figure class="visual-card" style="--img:url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&q=80')">
-    <figcaption>Human-centered validation with experts</figcaption>
-  </figure>
-  <figure class="visual-card tall" style="--img:url('https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1200&q=80')">
-    <figcaption>Biological systems exploration</figcaption>
-  </figure>
-  <figure class="visual-card tall" style="--img:url('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80')">
-    <figcaption>AI platforms powering education & institutions</figcaption>
-  </figure>
-</div>
+      <section class="glass border border-slate-200 rounded-2xl shadow-floating p-6 lg:p-8">
+        <p class="text-slate-700 text-lg">We collaborate with healthcare providers, academic centers, and industry partners to deploy pilot programs that validate our technologies against real-world workflows. Every solution is designed to scale responsibly while maintaining safety, compliance, and equitable access.</p>
+      </section>
 
-<p>We collaborate with healthcare providers, academic centers, and industry partners to deploy pilot programs that validate our technologies against real-world workflows. Every solution is designed to scale responsibly while maintaining safety, compliance, and equitable access.</p>
-</div>
-<div class="footer">
-  <span class="footer-copy">© <span data-year></span> AikNovTek Technologies Private Limited · All rights reserved.</span>
-  <a href="mailto:aikyanova@gmail.com">aikyanova@gmail.com</a>
-</div>
+    </div>
+  </main>
 
-</div>
+  <footer class="border-t border-slate-200 bg-white/90 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-600">
+      <span class="footer-copy">© <span data-year></span> AikNovTek Technologies Private Limited · All rights reserved.</span>
+      <a class="font-semibold text-brand hover:text-brandDark" href="mailto:aikyanova@gmail.com">aikyanova@gmail.com</a>
+    </div>
+  </footer>
 </div>
 <script src="site.js"></script>
 </body>

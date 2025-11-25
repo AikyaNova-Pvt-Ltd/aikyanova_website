@@ -1,91 +1,154 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Contact — AikyaNova</title><meta name="description" content="Contact AikyaNova for partnerships, collaborations, and DeepTech opportunities."><link rel="canonical" href="https://www.aikyanova.com/contact.html"><link rel="stylesheet" href="styles.css"><script defer src="site.js"></script></head>
-<body><div class="container"><div class="box">
-<div class="header"><div class="brand"><img src="logo_2.png" alt="AikyaNova logo"><div><h1>AikyaNova</h1><div class="tag">Innovation at the Intersection</div></div></div></div>
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="team.html">Team</a>
-<a href="careers.html">Careers</a>
-<a href="students.html">Students Corner</a>
-<a href="news.html">News</a>
-<a href="contact.html">Contact</a>
-</nav>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — AikyaNova</title>
+<meta name="description" content="Contact AikyaNova for partnerships, collaborations, and DeepTech opportunities.">
+<link rel="canonical" href="https://www.aikyanova.com/contact.html">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'], display: ['Space Grotesk', 'Inter', 'ui-sans-serif', 'system-ui'] },
+        colors: { brand: '#0ea5e9', brandDark: '#2563eb', ink: '#0f1b2d' },
+        boxShadow: { floating: '0 20px 50px rgba(8,44,94,.18)' },
+      },
+    },
+  };
+</script>
+<style>
+  body {background: radial-gradient(circle at 20% 20%, rgba(14,165,233,.08), transparent 26%), radial-gradient(circle at 80% 10%, rgba(37,99,235,.08), transparent 24%), linear-gradient(180deg, #f8fbff 0%, #eef2fb 55%, #f8fbff 100%);}
+  .glass {background: rgba(255,255,255,.86);backdrop-filter: blur(12px);}
+  .hero-bg {background: radial-gradient(circle at 20% 20%, rgba(14,165,233,.18), transparent 40%), radial-gradient(circle at 80% 10%, rgba(37,99,235,.16), transparent 36%), linear-gradient(135deg, #051933 0%, #0c2f57 45%, #0a3f7a 100%);}
+</style>
+<script defer src="site.js"></script>
+</head>
+<body class="min-h-screen text-ink font-sans antialiased">
+<div class="min-h-screen flex flex-col">
 
-<div class="main">
-  <section class="hero contact-hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="section-label">Connect with AikyaNova</div>
-      <h2>Partner with us to co-create advanced biosensing, therapeutic intelligence, and applied AI platforms.</h2>
-      <p class="lead">Tell us about your challenge and we’ll align our science, engineering, and AI teams to help.</p>
-    </div>
-  </section>
-
-  <div class="contact-panels">
-    <article class="contact-panel">
-      <h3>Partnerships</h3>
-      <p>Co-develop diagnostics, therapeutic intelligence, or applied AI pilots tailored to your workflows.</p>
-      <span class="pill">Response: <strong>24–48h</strong></span>
-    </article>
-    <article class="contact-panel">
-      <h3>Careers & collaborators</h3>
-      <p>DeepTech engineers, biologists, and AI builders—share your work and how you want to contribute.</p>
-      <span class="pill">Response: <strong>48h</strong></span>
-    </article>
-    <article class="contact-panel">
-      <h3>Media & speaking</h3>
-      <p>Press, panels, and keynotes on convergent biology, sensing, and applied AI.</p>
-      <span class="pill">Response: <strong>24h</strong></span>
-    </article>
-  </div>
-
-  <div class="contact-grid">
-    <form class="contact-form">
-      <div class="form-row">
-        <label>
-          Your name
-          <input type="text" name="name" placeholder="Jane Doe">
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" placeholder="you@example.com">
-        </label>
+  <header class="sticky top-0 z-30 glass border-b border-slate-200 shadow">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="logo_2.png" alt="AikyaNova logo" class="h-12 w-12 rounded-xl shadow-md">
+        <div>
+          <h1 class="text-xl font-display font-bold tracking-tight">AikyaNova</h1>
+          <div class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Innovation at the Intersection</div>
+        </div>
       </div>
-      <label>
-        Organisation
-        <input type="text" name="org" placeholder="Company / Institution">
-      </label>
-      <label>
-        Phone
-        <input type="tel" name="phone" placeholder="+1 234 567 8901">
-      </label>
-      <label>
-        How can we help?
-        <textarea name="message" rows="5" placeholder="Briefly describe your collaboration idea, pilot, or hiring need."></textarea>
-      </label>
-      <button type="submit" class="button">Send message</button>
-    </form>
+      <nav class="hidden md:flex items-center gap-2 text-sm font-semibold">
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="index.html">Home</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="about.html">About</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="team.html">Team</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="careers.html">Careers</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="students.html">Students Corner</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="news.html">News</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="contact.html">Contact</a>
+      </nav>
+      <div class="md:hidden">
+        <button aria-label="Open navigation" class="px-3 py-2 rounded-lg border border-slate-200 bg-white shadow-sm text-slate-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <nav class="md:hidden border-t border-slate-200 px-4 pb-3 flex flex-wrap gap-2 bg-white/85 backdrop-blur">
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="index.html">Home</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="about.html">About</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="team.html">Team</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="careers.html">Careers</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="students.html">Students Corner</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="news.html">News</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <div class="contact-card">
-      <h3>Address</h3>
-      <p>AikNovTek Technologies Private Limited<br>
+  <main class="flex-1 w-full">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 lg:py-14 space-y-10">
+
+      <section class="hero-bg text-white rounded-2xl shadow-floating p-6 lg:p-10 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-white/15 text-xs font-bold tracking-wide uppercase border border-white/20 shadow">
+          <span class="h-2 w-2 rounded-full bg-gradient-to-r from-brand to-brandDark"></span>
+          Connect with AikyaNova
+        </div>
+        <h2 class="text-3xl lg:text-4xl font-display font-semibold leading-tight">Partner with us to co-create advanced biosensing, therapeutic intelligence, and applied AI platforms.</h2>
+        <p class="text-lg text-slate-100/90">Tell us about your challenge and we’ll align our science, engineering, and AI teams to help.</p>
+      </section>
+
+      <section class="grid gap-4 md:grid-cols-3">
+        <article class="glass border border-slate-200 rounded-2xl shadow-floating p-5 space-y-2">
+          <h3 class="text-xl font-display font-semibold">Partnerships</h3>
+          <p class="text-slate-700">Co-develop diagnostics, therapeutic intelligence, or applied AI pilots tailored to your workflows.</p>
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-50 text-xs font-bold text-brand border border-sky-100">Response: <strong>24–48h</strong></span>
+        </article>
+        <article class="glass border border-slate-200 rounded-2xl shadow-floating p-5 space-y-2">
+          <h3 class="text-xl font-display font-semibold">Careers & collaborators</h3>
+          <p class="text-slate-700">DeepTech engineers, biologists, and AI builders—share your work and how you want to contribute.</p>
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-50 text-xs font-bold text-brand border border-sky-100">Response: <strong>48h</strong></span>
+        </article>
+        <article class="glass border border-slate-200 rounded-2xl shadow-floating p-5 space-y-2">
+          <h3 class="text-xl font-display font-semibold">Media & speaking</h3>
+          <p class="text-slate-700">Press, panels, and keynotes on convergent biology, sensing, and applied AI.</p>
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-50 text-xs font-bold text-brand border border-sky-100">Response: <strong>24h</strong></span>
+        </article>
+      </section>
+
+      <section class="grid gap-6 lg:grid-cols-3">
+        <form class="glass border border-slate-200 rounded-2xl shadow-floating p-6 lg:col-span-2 space-y-4">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="text-sm font-semibold text-ink space-y-2">
+              Your name
+              <input type="text" name="name" placeholder="Jane Doe" class="w-full px-3 py-3 rounded-lg border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand/50">
+            </label>
+            <label class="text-sm font-semibold text-ink space-y-2">
+              Email
+              <input type="email" name="email" placeholder="you@example.com" class="w-full px-3 py-3 rounded-lg border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand/50">
+            </label>
+          </div>
+          <label class="text-sm font-semibold text-ink space-y-2">
+            Organisation
+            <input type="text" name="org" placeholder="Company / Institution" class="w-full px-3 py-3 rounded-lg border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand/50">
+          </label>
+          <label class="text-sm font-semibold text-ink space-y-2">
+            Phone
+            <input type="tel" name="phone" placeholder="+1 234 567 8901" class="w-full px-3 py-3 rounded-lg border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand/50">
+          </label>
+          <label class="text-sm font-semibold text-ink space-y-2">
+            How can we help?
+            <textarea name="message" rows="5" placeholder="Briefly describe your collaboration idea, pilot, or hiring need." class="w-full px-3 py-3 rounded-lg border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand/50"></textarea>
+          </label>
+          <button type="submit" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-brand to-brandDark text-white font-semibold shadow-lg shadow-sky-500/25 transition hover:-translate-y-0.5">Send message</button>
+        </form>
+
+        <div class="glass border border-slate-200 rounded-2xl shadow-floating p-6 space-y-4">
+          <h3 class="text-xl font-display font-semibold">Address</h3>
+          <p class="text-slate-700">AikNovTek Technologies Private Limited<br>
          No.390, 1st Floor, 7th Main,<br>
          9th Cross Road, 2nd Block<br>
          Jayanagar, Bengaluru 560011</p>
 
-      <h3>Connect</h3>
-      <p><a href="mailto:aikyanova@gmail.com">aikyanova@gmail.com</a></p>
-      <div class="socials">
-        <a class="social" href="https://www.linkedin.com" target="_blank" rel="noreferrer">in</a>
-        <a class="social" href="https://twitter.com" target="_blank" rel="noreferrer">X</a>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="footer">
-  <span class="footer-copy">© <span data-year></span> AikNovTek Technologies Private Limited · All rights reserved.</span>
-  <a href="mailto:aikyanova@gmail.com">aikyanova@gmail.com</a>
-</div>
+          <h3 class="text-xl font-display font-semibold">Connect</h3>
+          <p><a class="text-brand font-semibold" href="mailto:aikyanova@gmail.com">aikyanova@gmail.com</a></p>
+          <div class="flex gap-3">
+            <a class="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 text-ink font-semibold bg-white hover:bg-sky-50" href="https://www.linkedin.com" target="_blank" rel="noreferrer">in</a>
+            <a class="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 text-ink font-semibold bg-white hover:bg-sky-50" href="https://twitter.com" target="_blank" rel="noreferrer">X</a>
+          </div>
+        </div>
+      </section>
 
-</div></div></body></html>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white/90 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-600">
+      <span class="footer-copy">© <span data-year></span> AikNovTek Technologies Private Limited · All rights reserved.</span>
+      <a class="font-semibold text-brand hover:text-brandDark" href="mailto:aikyanova@gmail.com">aikyanova@gmail.com</a>
+    </div>
+  </footer>
+</div>
+<script src="site.js"></script>
+</body>
+</html>

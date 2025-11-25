@@ -6,127 +6,172 @@
 <title>DeepTech Internships, AikyaNova</title>
 <meta name="description" content="Apply for DeepTech internships at AikyaNova and work on AI/ML in healthcare, drug discovery, docking, MD simulations, and cell culture with globally relevant certifications.">
 <link rel="canonical" href="https://www.aikyanova.com/students.html">
-<link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+          display: ['Space Grotesk', 'Inter', 'ui-sans-serif', 'system-ui'],
+        },
+        colors: { brand: '#0ea5e9', brandDark: '#2563eb', ink: '#0f1b2d' },
+        boxShadow: { floating: '0 20px 50px rgba(8,44,94,.18)' },
+      },
+    },
+  };
+</script>
+<style>
+  body {background: radial-gradient(circle at 20% 20%, rgba(14,165,233,.08), transparent 26%), radial-gradient(circle at 80% 10%, rgba(37,99,235,.08), transparent 24%), linear-gradient(180deg, #f8fbff 0%, #eef2fb 55%, #f8fbff 100%);}
+  .glass {background: rgba(255,255,255,.86);backdrop-filter: blur(12px);}
+</style>
 <script defer src="site.js"></script>
 </head>
-<body>
-<div class="container">
-<div class="box">
+<body class="min-h-screen text-ink font-sans antialiased">
+<div class="min-h-screen flex flex-col">
 
-<!-- Header -->
-<div class="header">
-  <div class="brand">
-    <img src="logo_2.png" alt="AikyaNova logo">
-    <div>
-      <h1>AikyaNova</h1>
-      <div class="tag">Innovation at the Intersection</div>
+  <header class="sticky top-0 z-30 glass border-b border-slate-200 shadow">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="logo_2.png" alt="AikyaNova logo" class="h-12 w-12 rounded-xl shadow-md">
+        <div>
+          <h1 class="text-xl font-display font-bold tracking-tight">AikyaNova</h1>
+          <div class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Innovation at the Intersection</div>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-2 text-sm font-semibold">
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="index.html">Home</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="about.html">About</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="team.html">Team</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="careers.html">Careers</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="students.html">Students Corner</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="news.html">News</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="contact.html">Contact</a>
+      </nav>
+      <div class="md:hidden">
+        <button aria-label="Open navigation" class="px-3 py-2 rounded-lg border border-slate-200 bg-white shadow-sm text-slate-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
     </div>
-  </div>
-</div>
+    <nav class="md:hidden border-t border-slate-200 px-4 pb-3 flex flex-wrap gap-2 bg-white/85 backdrop-blur">
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="index.html">Home</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="about.html">About</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="team.html">Team</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="careers.html">Careers</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="students.html">Students Corner</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="news.html">News</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<!-- Navigation -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="team.html">Team</a>
-  <a href="careers.html">Careers</a>
-  <a href="students.html">Students Corner</a>
-  <a href="news.html">News</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <main class="flex-1 w-full">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 lg:py-14 space-y-10">
 
-<!-- Main -->
-<div class="main">
-
-<section class="hero small">
-  <div class="inline-badge"><span></span>DeepTech Internships</div>
-  <h2>Learn AI applied to Diagnostics, Drug discovery and Sensing  with AikyaNova</h2>
-  <p class="lead">
+      <section class="glass border border-slate-200 rounded-2xl shadow-floating p-6 lg:p-8 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-sky-50 text-xs font-bold tracking-wide uppercase border border-sky-100 text-brand">
+          <span class="h-2 w-2 rounded-full bg-gradient-to-r from-brand to-brandDark"></span>
+          DeepTech Internships
+        </div>
+        <h2 class="text-3xl lg:text-4xl font-display font-semibold leading-tight">Learn AI applied to Diagnostics, Drug discovery and Sensing  with AikyaNova</h2>
+        <p class="text-lg text-slate-600">
     Work on real DeepTech problems at the intersection of AI/ML, healthcare, and experimental biology.
     Build projects that help you stand out for placements and higher studies.
-  </p>
-</section>
+        </p>
+      </section>
 
-<h3>What you can learn</h3>
-<div class="feature-grid">
-  <article class="feature-card">
-    <h3>AI / ML & healthcare analytics</h3>
-    <p>
+      <section class="space-y-5">
+        <h3 class="text-2xl font-display font-semibold">What you can learn</h3>
+        <div class="grid gap-4 md:grid-cols-3">
+          <article class="glass border border-slate-200 rounded-2xl shadow-floating p-5 space-y-2">
+            <h3 class="text-xl font-display font-semibold">AI / ML & healthcare analytics</h3>
+            <p class="text-slate-700">
       Get hands-on exposure to machine learning and AI workflows applied to healthcare and life sciences,
       from basic models to real datasets in diagnostics, prediction, and clinical decision support.
-    </p>
-  </article>
+            </p>
+          </article>
 
-  <article class="feature-card">
-    <h3>Drug discovery: docking & MD simulations</h3>
-    <p>
+          <article class="glass border border-slate-200 rounded-2xl shadow-floating p-5 space-y-2">
+            <h3 class="text-xl font-display font-semibold">Drug discovery: docking & MD simulations</h3>
+            <p class="text-slate-700">
       Work with in silico pipelines for structure-based drug discovery, including molecular docking,
       basic molecular dynamics simulations, and interpretation of results for candidate selection.
-    </p>
-  </article>
+            </p>
+          </article>
 
-  <article class="feature-card">
-    <h3>Cell culture & BSL-2 exposure</h3>
-    <p>
+          <article class="glass border border-slate-200 rounded-2xl shadow-floating p-5 space-y-2">
+            <h3 class="text-xl font-display font-semibold">Cell culture & BSL-2 exposure</h3>
+            <p class="text-slate-700">
       Learn the foundations of mammalian / microbial cell culture, aseptic techniques, and good practices
       within BSL-2 laboratory environments under guided supervision and safety frameworks.
-    </p>
-  </article>
-</div>
+            </p>
+          </article>
+        </div>
+      </section>
 
-<h3>Internship formats</h3>
-<ul>
-  <li><strong>Summer / winter internships:</strong> short-term, intensive learning and project execution.</li>
-  <li><strong>Final-year projects:</strong> do your B.Tech / M.Tech / M.Sc project in collaboration with AikyaNova on real DeepTech problem statements.</li>
-  <li><strong>Mini-projects & online tracks:</strong> remote-friendly modules for students outside Bengaluru or with limited time.</li>
-</ul>
+      <section class="space-y-3">
+        <h3 class="text-2xl font-display font-semibold">Internship formats</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700">
+          <li><strong>Summer / winter internships:</strong> short-term, intensive learning and project execution.</li>
+          <li><strong>Final-year projects:</strong> do your B.Tech / M.Tech / M.Sc project in collaboration with AikyaNova on real DeepTech problem statements.</li>
+          <li><strong>Mini-projects & online tracks:</strong> remote-friendly modules for students outside Bengaluru or with limited time.</li>
+        </ul>
+      </section>
 
-<h3>Certification & outcomes</h3>
-<p>
+      <section class="space-y-3">
+        <h3 class="text-2xl font-display font-semibold">Certification & outcomes</h3>
+        <p class="text-slate-700">
   Interns who successfully complete their projects receive:
-</p>
-<ul>
-  <li><strong>AikyaNova DeepTech internship certificate</strong> highlighting skills in AI/ML, drug discovery, and/or lab techniques.</li>
-  <li><strong>Project report and portfolio artifacts</strong> that can be used for placements and higher-education applications.</li>
-  <li><strong>Recommendation context</strong> (where appropriate) based on quality of work, ownership, and impact.</li>
-  <li>Orientation towards <strong>globally relevant competencies</strong> in AI, healthcare technology, and experimental workflows.</li>
-</ul>
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700">
+          <li><strong>AikyaNova DeepTech internship certificate</strong> highlighting skills in AI/ML, drug discovery, and/or lab techniques.</li>
+          <li><strong>Project report and portfolio artifacts</strong> that can be used for placements and higher-education applications.</li>
+          <li><strong>Recommendation context</strong> (where appropriate) based on quality of work, ownership, and impact.</li>
+          <li>Orientation towards <strong>globally relevant competencies</strong> in AI, healthcare technology, and experimental workflows.</li>
+        </ul>
+      </section>
 
-<h3>Who should apply?</h3>
-<ul>
-  <li>B.Tech / B.E / M.Tech / M.Sc / B.Sc students in ECE, CSE, AI/ML, Biotechnology, Biomedical, Life Sciences, or related fields.</li>
-  <li>Students curious about combining <strong>coding + biology + hardware</strong>.</li>
-  <li>Those planning to apply for <strong>higher studies</strong> or research positions and wanting strong projects on their CV.</li>
-</ul>
+      <section class="space-y-3">
+        <h3 class="text-2xl font-display font-semibold">Who should apply?</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700">
+          <li>B.Tech / B.E / M.Tech / M.Sc / B.Sc students in ECE, CSE, AI/ML, Biotechnology, Biomedical, Life Sciences, or related fields.</li>
+          <li>Students curious about combining <strong>coding + biology + hardware</strong>.</li>
+          <li>Those planning to apply for <strong>higher studies</strong> or research positions and wanting strong projects on their CV.</li>
+        </ul>
+      </section>
 
-<h3>How to apply</h3>
-<p>
+      <section class="space-y-3">
+        <h3 class="text-2xl font-display font-semibold">How to apply</h3>
+        <p class="text-slate-700">
   Send us a short email with:
-</p>
-<ul>
-  <li>Your name, current program, and year of study.</li>
-  <li>College / university name.</li>
-  <li>Area(s) of interest: e.g., <em>AI/ML in healthcare</em>, <em>docking & MD</em>, <em>cell culture & BSL-2</em>, <em>final-year project</em>.</li>
-  <li>A brief note (4–5 lines) on why you want to work in DeepTech.</li>
-  <li>Your CV or a simple list of skills / tools you know (optional but helpful).</li>
-</ul>
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-slate-700">
+          <li>Your name, current program, and year of study.</li>
+          <li>College / university name.</li>
+          <li>Area(s) of interest: e.g., <em>AI/ML in healthcare</em>, <em>docking & MD</em>, <em>cell culture & BSL-2</em>, <em>final-year project</em>.</li>
+          <li>A brief note (4–5 lines) on why you want to work in DeepTech.</li>
+          <li>Your CV or a simple list of skills / tools you know (optional but helpful).</li>
+        </ul>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-brand to-brandDark text-white font-semibold shadow-lg shadow-sky-500/25 transition hover:-translate-y-0.5" href="mailto:aikyanova@gmail.com?subject=DeepTech%20Internship%20Application">Apply by email</a>
+          <a class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white text-brandDark font-bold border border-slate-200 shadow-md transition hover:-translate-y-0.5" href="contact.html">Ask a question</a>
+        </div>
+      </section>
 
-<div class="cta">
-  <a class="button" href="mailto:aikyanova@gmail.com?subject=DeepTech%20Internship%20Application">Apply by email</a>
-  <a class="button secondary" href="contact.html">Ask a question</a>
-</div>
+    </div>
+  </main>
 
+  <footer class="border-t border-slate-200 bg-white/90 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-600">
+      <span class="footer-copy">© <span data-year></span> AikNovTek Technologies Private Limited · All rights reserved.</span>
+      <a class="font-semibold text-brand hover:text-brandDark" href="mailto:aikyanova@gmail.com">aikyanova@gmail.com</a>
+    </div>
+  </footer>
 </div>
-
-<!-- Footer -->
-<div class="footer">
-  <span class="footer-copy">© <span data-year></span> AikNovTek Technologies Private Limited · All rights reserved.</span>
-  <a href="mailto:aikyanova@gmail.com">aikyanova@gmail.com</a>
-</div>
-
-</div>
-</div>
+<script src="site.js"></script>
 </body>
 </html>
