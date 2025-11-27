@@ -69,6 +69,44 @@
       <section class="glass border border-slate-200 rounded-2xl shadow-floating p-6 lg:p-8 space-y-3">
         <h2 class="text-3xl font-display font-semibold">News</h2>
         <p class="text-slate-700 text-lg">Updates and press will appear here.</p>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <article class="rounded-xl border border-slate-200 bg-white/85 shadow-md p-5 lg:p-6 space-y-4">
+            <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">
+              <span class="px-2 py-1 rounded-md bg-sky-50 text-brand">New</span>
+              <span>27 Nov 2025</span>
+            </div>
+            <div class="space-y-2 text-left">
+              <p class="text-sm font-medium text-slate-600">Cofounders are excited to announce:</p>
+              <h3 class="text-xl font-display font-semibold text-ink leading-tight">AIKNOVTEK Technologies Private Limited is incorporated</h3>
+              <p class="text-slate-700 leading-relaxed"><strong>AIKNOVTEK TECHNOLOGIES PRIVATE LIMITED</strong> is incorporated on this <strong>TWENTY SEVENTH day of NOVEMBER TWO THOUSAND TWENTY FIVE</strong> under the Companies Act, 2013 (18 of 2013) as a company limited by shares.</p>
+            </div>
+            <dl class="grid grid-cols-1 gap-2 text-sm text-slate-700 text-left leading-relaxed">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                <dt class="font-semibold text-slate-800">Corporate Identity Number (CIN)</dt>
+                <dd class="font-mono tracking-tight text-slate-700">U72100KA2025PTC211351</dd>
+              </div>
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                <dt class="font-semibold text-slate-800">Permanent Account Number (PAN)</dt>
+                <dd class="font-mono tracking-tight text-slate-700">ABECA1975C*</dd>
+              </div>
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                <dt class="font-semibold text-slate-800">Tax Deduction and Collection Account Number (TAN)</dt>
+                <dd class="font-mono tracking-tight text-slate-700">BLRA58133F*</dd>
+              </div>
+            </dl>
+            <button id="incorporation-toggle" class="inline-flex items-center gap-2 rounded-lg bg-brand text-white px-4 py-2 text-sm font-semibold shadow hover:bg-brandDark focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-white">
+              Read the full article
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="incorporation-article" class="hidden space-y-3 border-t border-slate-200 pt-4 text-slate-700 leading-relaxed text-left">
+              <p><strong>Milestone achieved:</strong> Our cofounders are thrilled to share that AIKNOVTEK Technologies Private Limited has been formally incorporated. This confirms our commitment to building reliable solutions at the intersection of engineering, biology, and AI.</p>
+              <p><strong>What’s next:</strong> With incorporation complete, we are opening conversations with partners, universities, and early adopters to co-create products that responsibly leverage AI. The team will share additional updates on leadership appointments, pilot programs, and early product releases in the coming weeks.</p>
+              <p class="text-sm text-slate-600"><strong>Partner with us:</strong> For inquiries, please reach out to <a class="text-brand font-semibold hover:text-brandDark" href="mailto:aikyanova@gmail.com">aikyanova@gmail.com</a>.</p>
+            </div>
+          </article>
+        </div>
       </section>
     </div>
   </main>
@@ -81,5 +119,15 @@
   </footer>
 </div>
 <script src="site.js"></script>
+<script>
+  const toggle = document.getElementById('incorporation-toggle');
+  const article = document.getElementById('incorporation-article');
+  const icon = toggle?.querySelector('svg');
+  toggle?.addEventListener('click', () => {
+    const isOpen = !article.classList.contains('hidden');
+    article.classList.toggle('hidden', isOpen);
+    icon?.classList.toggle('rotate-180', !isOpen);
+  });
+</script>
 </body>
 </html>
