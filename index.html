@@ -42,6 +42,16 @@
     background-size: cover;
     background-position: center;
   }
+  .news-ticker {
+    display: flex;
+    gap: 2.5rem;
+    animation: ticker 18s linear infinite;
+    min-width: max-content;
+  }
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -97,6 +107,43 @@
 
   <main class="flex-1 w-full">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 lg:py-14 space-y-10">
+
+      <section class="glass border border-slate-200 rounded-2xl shadow-floating overflow-hidden">
+        <div class="flex flex-col sm:flex-row items-center gap-3 px-4 py-3 bg-gradient-to-r from-white to-sky-50">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-[0.25em]">
+            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+            New
+          </div>
+          <div class="relative overflow-hidden flex-1 w-full">
+            <div class="news-ticker text-sm font-semibold text-ink">
+              <a class="inline-flex items-center gap-2 hover:text-brand transition" href="news.html#internship-announcement">
+                Advanced DeepTech Internship · Limited seats · Project-based · Apply now →
+              </a>
+              <a class="inline-flex items-center gap-2 hover:text-brand transition" href="news.html#internship-announcement">
+                Focus areas: AI/ML, computational biology, digital health, embedded systems, nanotech · View details →
+              </a>
+              <a class="inline-flex items-center gap-2 hover:text-brand transition" href="news.html#internship-announcement">
+                Flexible online/offline · 2–6 months · Mentorship from IITians · Read the flyer →
+              </a>
+              <a class="inline-flex items-center gap-2 hover:text-brand transition" href="news.html#internship-announcement">
+                Advanced DeepTech Internship · Limited seats · Project-based · Apply now →
+              </a>
+              <a class="inline-flex items-center gap-2 hover:text-brand transition" href="news.html#internship-announcement">
+                Focus areas: AI/ML, computational biology, digital health, embedded systems, nanotech · View details →
+              </a>
+              <a class="inline-flex items-center gap-2 hover:text-brand transition" href="news.html#internship-announcement">
+                Flexible online/offline · 2–6 months · Mentorship from IITians · Read the flyer →
+              </a>
+            </div>
+          </div>
+          <a class="inline-flex items-center gap-2 rounded-lg border border-brand text-brand px-4 py-2 text-xs font-bold uppercase tracking-wide bg-white hover:bg-sky-50 transition" href="news.html#internship-announcement">
+            View news
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </section>
 
       <section class="relative overflow-hidden rounded-2xl lg:rounded-3xl hero-bg text-white shadow-floating">
         <div class="relative p-6 lg:p-10 space-y-4">
