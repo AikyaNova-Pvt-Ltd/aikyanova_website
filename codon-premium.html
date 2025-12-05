@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codon Usage Suite | Premium Access</title>
+  <meta name="description" content="Premium access gate for AikyaNova's Codon Usage Bias SaaS toolkit.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: { brand: '#0ea5e9', brandDark: '#2563eb', ink: '#0f1b2d' },
+          boxShadow: { floating: '0 20px 50px rgba(8,44,94,.18)' },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-slate-50 via-white to-sky-50 text-ink font-sans antialiased">
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
+    <div class="bg-white border border-slate-200 rounded-2xl shadow-floating p-6 sm:p-8 space-y-6">
+      <div class="space-y-2">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wide">
+          Premium
+        </div>
+        <h1 class="text-3xl font-semibold">Codon Usage Suite (Credentialed Access)</h1>
+        <p class="text-slate-600">Enter your access code to launch the Codon Usage Bias SaaS package. If you don’t have credentials, request a premium subscription or partnership invite.</p>
+      </div>
+
+      <form id="access-form" class="space-y-3">
+        <label for="access-code" class="block text-sm font-semibold text-slate-700">Access code</label>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <input id="access-code" name="access-code" type="text" required
+                 class="flex-1 rounded-xl border border-slate-300 px-4 py-3 text-base focus:border-brand focus:ring-2 focus:ring-brand/30 outline-none"
+                 placeholder="Enter provided premium code">
+          <button type="submit" class="rounded-xl px-5 py-3 bg-gradient-to-r from-brand to-brandDark text-white font-semibold shadow-md hover:-translate-y-0.5 transition">
+            Continue
+          </button>
+        </div>
+        <p id="access-message" class="text-sm font-semibold"></p>
+      </form>
+
+      <div class="bg-sky-50 border border-sky-100 rounded-xl p-4 text-sm text-slate-700">
+        No code yet? <a class="text-brandDark font-semibold" href="mailto:aikyanova@gmail.com?subject=Premium%20Codon%20Suite%20Access">Request premium access</a> or <a class="text-brand font-semibold" href="contact.html">contact our team</a>.
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const accessForm = document.getElementById('access-form');
+    const accessInput = document.getElementById('access-code');
+    const accessMessage = document.getElementById('access-message');
+    const validCodes = ['PREMIUM2025', 'AIKYA-LAB']; // Replace with your actual premium codes or server check
+    const destinationUrl = '../CodonUsageBias/index.html';
+
+    accessForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const userCode = accessInput.value.trim();
+      const isValid = validCodes.some(code => code.toLowerCase() === userCode.toLowerCase());
+
+      if (isValid) {
+        accessMessage.textContent = 'Access granted. Redirecting...';
+        accessMessage.className = 'text-sm font-semibold text-emerald-700';
+        setTimeout(() => {
+          window.location.href = destinationUrl;
+        }, 500);
+      } else {
+        accessMessage.textContent = 'Invalid or expired code. Please verify your premium credentials.';
+        accessMessage.className = 'text-sm font-semibold text-red-600';
+      }
+    });
+  </script>
+</body>
+</html>
