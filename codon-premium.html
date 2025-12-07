@@ -54,13 +54,42 @@
     const accessMessage = document.getElementById('access-message');
     const destinationUrl = 'https://app.aikyanova.com';
 
-    accessForm.addEventListener('submit', (event) => {
+    accessForm.addEventListener('submit', async (event) => {
       event.preventDefault();
       const userCode = accessInput.value.trim();
-      accessMessage.textContent = 'Redirecting to Codon Usage Bias...';
-      accessMessage.className = 'text-sm font-semibold text-emerald-700';
-      const target = userCode ? `${destinationUrl}/analysis.html?code=${encodeURIComponent(userCode)}` : `${destinationUrl}`;
-      window.location.href = target;
+      if (!userCode) {
+        accessMessage.textContent = 'Please enter your premium access code.';
+        accessMessage.className = 'text-sm font-semibold text-red-600';
+        return;
+      }
+
+      // Validate against the deployed app before redirecting
+      accessMessage.textContent = 'Validating code...';
+      accessMessage.className = 'text-sm font-semibold text-slate-700';
+
+      try {
+        const verifyResponse = await fetch(`${destinationUrl}/verify_access`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Access-Code': userCode
+          }
+        });
+
+        if (verifyResponse.ok) {
+          accessMessage.textContent = 'Access granted. Redirecting...';
+          accessMessage.className = 'text-sm font-semibold text-emerald-700';
+          const target = `${destinationUrl}/analysis.html?code=${encodeURIComponent(userCode)}`;
+          window.location.href = target;
+        } else {
+          accessMessage.textContent = 'Invalid or expired code. Please verify your premium credentials.';
+          accessMessage.className = 'text-sm font-semibold text-red-600';
+        }
+      } catch (err) {
+        console.error(err);
+        accessMessage.textContent = 'Could not validate code. Please try again in a moment.';
+        accessMessage.className = 'text-sm font-semibold text-red-600';
+      }
     });
   </script>
 </body>
