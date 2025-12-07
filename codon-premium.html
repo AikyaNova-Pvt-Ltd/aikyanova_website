@@ -52,24 +52,15 @@
     const accessForm = document.getElementById('access-form');
     const accessInput = document.getElementById('access-code');
     const accessMessage = document.getElementById('access-message');
-    const validCodes = ['PREMIUM2025', 'AIKYA-LAB']; // Replace with your actual premium codes or server check
     const destinationUrl = 'https://app.aikyanova.com';
 
     accessForm.addEventListener('submit', (event) => {
       event.preventDefault();
       const userCode = accessInput.value.trim();
-      const isValid = validCodes.some(code => code.toLowerCase() === userCode.toLowerCase());
-
-      if (isValid) {
-        accessMessage.textContent = 'Access granted. Redirecting...';
-        accessMessage.className = 'text-sm font-semibold text-emerald-700';
-        setTimeout(() => {
-          window.location.href = destinationUrl;
-        }, 500);
-      } else {
-        accessMessage.textContent = 'Invalid or expired code. Please verify your premium credentials.';
-        accessMessage.className = 'text-sm font-semibold text-red-600';
-      }
+      accessMessage.textContent = 'Redirecting to Codon Usage Bias...';
+      accessMessage.className = 'text-sm font-semibold text-emerald-700';
+      const target = userCode ? `${destinationUrl}/analysis.html?code=${encodeURIComponent(userCode)}` : `${destinationUrl}`;
+      window.location.href = target;
     });
   </script>
 </body>
