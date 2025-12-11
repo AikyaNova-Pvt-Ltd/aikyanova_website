@@ -53,7 +53,7 @@ if (contactForm) {
 
     try {
       setSendingState(true);
-      const response = await fetch('https://formsubmit.co/ajax/aikyanova@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/contact@aikyanova.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(formData),
