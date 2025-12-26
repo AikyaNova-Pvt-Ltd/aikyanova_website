@@ -70,3 +70,65 @@ if (contactForm) {
     }
   });
 }
+
+// Studio community form submission to email endpoint
+const studioForm = document.getElementById('studio-community-form');
+if (studioForm) {
+  if (studioForm.dataset.bound === 'true') {
+    // Avoid duplicate bindings when script is loaded twice on the page
+    return;
+  }
+  studioForm.dataset.bound = 'true';
+
+  const submitButton = studioForm.querySelector('button[type="submit"]');
+  const sendLabel = studioForm.querySelector('.send-label');
+  const sendingLabel = studioForm.querySelector('.sending-label');
+  const successMessage = document.getElementById('studio-success');
+  const errorMessage = document.getElementById('studio-error');
+  const errorText = errorMessage?.querySelector('[data-error-text]');
+
+  const setSendingState = (isSending) => {
+    if (submitButton) submitButton.disabled = isSending;
+    sendLabel?.classList.toggle('hidden', isSending);
+    sendingLabel?.classList.toggle('hidden', !isSending);
+  };
+
+  studioForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    successMessage?.classList.add('hidden');
+    errorMessage?.classList.add('hidden');
+    if (errorText) errorText.textContent = 'Something went wrong.';
+
+    const formData = Object.fromEntries(new FormData(studioForm).entries());
+    const requiredFieldsFilled = formData.name && formData.email && formData.interests;
+    if (!requiredFieldsFilled) {
+      if (errorText) errorText.textContent = 'Please complete the required fields.';
+      errorMessage?.classList.remove('hidden');
+      return;
+    }
+
+    try {
+      setSendingState(true);
+      const response = await fetch('https://formsubmit.co/ajax/contact@aikyanova.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          interests: formData.interests,
+          notes: formData.notes || '',
+          source: 'Studio community',
+        }),
+      });
+
+      if (!response.ok) throw new Error('Failed to send message');
+      studioForm.reset();
+      successMessage?.classList.remove('hidden');
+    } catch (error) {
+      console.error(error);
+      errorMessage?.classList.remove('hidden');
+    } finally {
+      setSendingState(false);
+    }
+  });
+}
