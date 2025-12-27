@@ -39,8 +39,7 @@ const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   if (contactForm.dataset.bound === 'true') {
     // Avoid duplicate bindings when script is loaded twice on the page
-    return;
-  }
+  } else {
   contactForm.dataset.bound = 'true';
 
   const submitButton = contactForm.querySelector('button[type="submit"]');
@@ -88,6 +87,7 @@ if (contactForm) {
       setSendingState(false);
     }
   });
+  }
 }
 
 // Studio community form submission to email endpoint
@@ -95,8 +95,7 @@ const studioForm = document.getElementById('studio-community-form');
 if (studioForm) {
   if (studioForm.dataset.bound === 'true') {
     // Avoid duplicate bindings when script is loaded twice on the page
-    return;
-  }
+  } else {
   studioForm.dataset.bound = 'true';
 
   const submitButton = studioForm.querySelector('button[type="submit"]');
@@ -150,4 +149,5 @@ if (studioForm) {
       setSendingState(false);
     }
   });
+  }
 }
