@@ -13,7 +13,8 @@ document.querySelectorAll('nav a').forEach(link => {
 // Mobile navigation toggle (per header)
 document.querySelectorAll('[data-nav-toggle]').forEach(button => {
   const header = button.closest('header');
-  const menu = header?.querySelector('[data-nav-menu]');
+  if (!header) return;
+  const menu = header.querySelector('[data-nav-menu]');
   if (!menu) return;
 
   const setOpen = (isOpen) => {
@@ -47,25 +48,25 @@ if (contactForm) {
   const sendingLabel = contactForm.querySelector('.sending-label');
   const successMessage = document.getElementById('contact-success');
   const errorMessage = document.getElementById('contact-error');
-  const errorText = errorMessage?.querySelector('[data-error-text]');
+  const errorText = errorMessage ? errorMessage.querySelector('[data-error-text]') : null;
 
   const setSendingState = (isSending) => {
     if (submitButton) submitButton.disabled = isSending;
-    sendLabel?.classList.toggle('hidden', isSending);
-    sendingLabel?.classList.toggle('hidden', !isSending);
+    if (sendLabel) sendLabel.classList.toggle('hidden', isSending);
+    if (sendingLabel) sendingLabel.classList.toggle('hidden', !isSending);
   };
 
   contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    successMessage?.classList.add('hidden');
-    errorMessage?.classList.add('hidden');
+    if (successMessage) successMessage.classList.add('hidden');
+    if (errorMessage) errorMessage.classList.add('hidden');
     if (errorText) errorText.textContent = 'Something went wrong.';
 
     const formData = Object.fromEntries(new FormData(contactForm).entries());
     const requiredFieldsFilled = formData.name && formData.email && formData.message;
     if (!requiredFieldsFilled) {
       if (errorText) errorText.textContent = 'Please complete the required fields.';
-      errorMessage?.classList.remove('hidden');
+      if (errorMessage) errorMessage.classList.remove('hidden');
       return;
     }
 
@@ -79,10 +80,10 @@ if (contactForm) {
 
       if (!response.ok) throw new Error('Failed to send message');
       contactForm.reset();
-      successMessage?.classList.remove('hidden');
+      if (successMessage) successMessage.classList.remove('hidden');
     } catch (error) {
       console.error(error);
-      errorMessage?.classList.remove('hidden');
+      if (errorMessage) errorMessage.classList.remove('hidden');
     } finally {
       setSendingState(false);
     }
@@ -103,25 +104,25 @@ if (studioForm) {
   const sendingLabel = studioForm.querySelector('.sending-label');
   const successMessage = document.getElementById('studio-success');
   const errorMessage = document.getElementById('studio-error');
-  const errorText = errorMessage?.querySelector('[data-error-text]');
+  const errorText = errorMessage ? errorMessage.querySelector('[data-error-text]') : null;
 
   const setSendingState = (isSending) => {
     if (submitButton) submitButton.disabled = isSending;
-    sendLabel?.classList.toggle('hidden', isSending);
-    sendingLabel?.classList.toggle('hidden', !isSending);
+    if (sendLabel) sendLabel.classList.toggle('hidden', isSending);
+    if (sendingLabel) sendingLabel.classList.toggle('hidden', !isSending);
   };
 
   studioForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    successMessage?.classList.add('hidden');
-    errorMessage?.classList.add('hidden');
+    if (successMessage) successMessage.classList.add('hidden');
+    if (errorMessage) errorMessage.classList.add('hidden');
     if (errorText) errorText.textContent = 'Something went wrong.';
 
     const formData = Object.fromEntries(new FormData(studioForm).entries());
     const requiredFieldsFilled = formData.name && formData.email && formData.interests;
     if (!requiredFieldsFilled) {
       if (errorText) errorText.textContent = 'Please complete the required fields.';
-      errorMessage?.classList.remove('hidden');
+      if (errorMessage) errorMessage.classList.remove('hidden');
       return;
     }
 
@@ -141,10 +142,10 @@ if (studioForm) {
 
       if (!response.ok) throw new Error('Failed to send message');
       studioForm.reset();
-      successMessage?.classList.remove('hidden');
+      if (successMessage) successMessage.classList.remove('hidden');
     } catch (error) {
       console.error(error);
-      errorMessage?.classList.remove('hidden');
+      if (errorMessage) errorMessage.classList.remove('hidden');
     } finally {
       setSendingState(false);
     }
