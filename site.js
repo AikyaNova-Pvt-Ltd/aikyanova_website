@@ -10,6 +10,24 @@ document.querySelectorAll('nav a').forEach(link => {
   }
 });
 
+// Mobile navigation toggle (per header)
+document.querySelectorAll('[data-nav-toggle]').forEach(button => {
+  const header = button.closest('header');
+  const menu = header?.querySelector('[data-nav-menu]');
+  if (!menu) return;
+
+  const setOpen = (isOpen) => {
+    menu.classList.toggle('hidden', !isOpen);
+    button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  };
+
+  setOpen(false);
+  button.addEventListener('click', () => {
+    const isOpen = menu.classList.contains('hidden');
+    setOpen(isOpen);
+  });
+});
+
 const year = new Date().getFullYear();
 document.querySelectorAll('[data-year]').forEach(el => {
   el.textContent = year;
