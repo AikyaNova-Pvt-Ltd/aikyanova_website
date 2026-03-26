@@ -1,10 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F1SZKETVMX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F1SZKETVMX');
+</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Codon Usage Suite | Premium Access</title>
   <meta name="description" content="Premium access gate for AikyaNova™'s Codon Usage Bias SaaS toolkit.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AikyaNova™">
+<meta property="og:title" content="Codon Usage Suite | Premium Access — AikyaNova™">
+<meta property="og:description" content="Premium access gate for AikyaNova™'s Codon Usage Bias SaaS toolkit.">
+<meta property="og:url" content="https://www.aikyanova.com/codon-premium.html">
+<meta property="og:image" content="https://www.aikyanova.com/logo_2.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -84,8 +98,17 @@
         if (verifyResponse.ok) {
           accessMessage.textContent = 'Access granted. Redirecting...';
           accessMessage.className = 'text-sm font-semibold text-emerald-700';
-          const target = `${destinationUrl}/analysis.html?code=${encodeURIComponent(userCode)}`;
-          window.location.href = target;
+          // POST the code via a hidden form so it never appears in the URL or browser history
+          const redirectForm = document.createElement('form');
+          redirectForm.method = 'POST';
+          redirectForm.action = `${destinationUrl}/analysis.html`;
+          const codeField = document.createElement('input');
+          codeField.type = 'hidden';
+          codeField.name = 'code';
+          codeField.value = userCode;
+          redirectForm.appendChild(codeField);
+          document.body.appendChild(redirectForm);
+          redirectForm.submit();
         } else {
           accessMessage.textContent = 'Invalid or expired code. Please verify your premium credentials.';
           accessMessage.className = 'text-sm font-semibold text-red-600';

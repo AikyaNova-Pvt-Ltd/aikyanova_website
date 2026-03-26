@@ -15,6 +15,12 @@
 <title>Studio — AikyaNova™</title>
 <meta name="description" content="AikyaNova Studio showcases our deep-tech videos, learning kits, and student-friendly projects.">
 <link rel="canonical" href="https://www.aikyanova.com/studio.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AikyaNova™">
+<meta property="og:title" content="Studio — AikyaNova™">
+<meta property="og:description" content="AikyaNova Studio showcases our deep-tech videos, learning kits, and student-friendly projects.">
+<meta property="og:url" content="https://www.aikyanova.com/studio.html">
+<meta property="og:image" content="https://www.aikyanova.com/logo_2.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -55,7 +61,7 @@
         <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="about.html">About</a>
         <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="team.html">Team</a>
         <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="careers.html">Careers</a>
-        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="students.html">Students Corner</a>
+        <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="students.html">Training</a>
         <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="news.html">News</a>
         <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="studio.html">Studio</a>
         <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="contact.html">Contact</a>
@@ -73,7 +79,7 @@
       <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="about.html">About</a>
       <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="team.html">Team</a>
       <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="careers.html">Careers</a>
-      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="students.html">Students Corner</a>
+      <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="students.html">Training</a>
       <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="news.html">News</a>
       <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="studio.html">Studio</a>
       <a class="px-3 py-2 rounded-lg transition hover:text-brand hover:bg-sky-50" href="contact.html">Contact</a>
@@ -115,6 +121,36 @@
         </div>
       </section>
 
+      <section class="space-y-4">
+        <h3 class="text-xl font-display font-semibold">More videos</h3>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="glass border border-slate-200 rounded-2xl shadow-floating overflow-hidden">
+            <div class="aspect-video bg-slate-900">
+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/V67PYK5N2Mo" title="Clear Protective Acrylic Case for ESP32 — AikyaNova" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="px-5 py-4 space-y-1">
+              <div class="flex items-center justify-between gap-2">
+                <h4 class="text-sm font-display font-bold text-ink">Clear Acrylic Case for ESP32</h4>
+                <a class="text-xs font-semibold text-brand hover:text-brandDark flex-shrink-0" href="https://www.youtube.com/watch?v=V67PYK5N2Mo" target="_blank" rel="noreferrer">Watch on YouTube</a>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">Bare handling silently damages your ESP32 through static discharge. We built a clear acrylic case that eliminates ESD exposure, adds USB-C support, and keeps every pin fully accessible — without adding bulk. Available on Amazon.in.</p>
+            </div>
+          </div>
+          <div class="glass border border-slate-200 rounded-2xl shadow-floating overflow-hidden">
+            <div class="aspect-video bg-slate-900">
+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/1LG1bkZqJis" title="Getting Started with ESP32 — Arduino IDE Setup — AikyaNova" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="px-5 py-4 space-y-1">
+              <div class="flex items-center justify-between gap-2">
+                <h4 class="text-sm font-display font-bold text-ink">Getting Started with ESP32 — Arduino IDE Setup</h4>
+                <a class="text-xs font-semibold text-brand hover:text-brandDark flex-shrink-0" href="https://www.youtube.com/watch?v=1LG1bkZqJis" target="_blank" rel="noreferrer">Watch on YouTube</a>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">New to ESP32? This step-by-step tutorial walks you through installing the Arduino IDE, adding ESP32 board support, setting up USB drivers, and running your first program — a blinking onboard LED to confirm everything works.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <div class="glass border border-slate-200 rounded-2xl shadow-floating p-5 space-y-2">
           <p class="text-xs uppercase tracking-[0.25em] text-slate-500 font-semibold">Embedded systems</p>
@@ -144,7 +180,7 @@
               <li>Guided learning paths for beginners.</li>
             </ul>
           </div>
-          <form id="studio-community-form" action="https://formsubmit.co/contact@aikyanova.com" method="POST" class="space-y-4" novalidate>
+          <form id="studio-community-form" action="https://formsubmit.co/contact@aikyanova.com" method="POST" class="space-y-4">
             <div class="grid gap-4 sm:grid-cols-2">
               <label class="text-sm font-semibold text-slate-700">
                 Name

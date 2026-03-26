@@ -1,0 +1,7 @@
+.DS_Store
+
+# Scratch / working media files not used on the site
+ESP32*
+PXL_*
+IMG_*
+"image (1).jpg"
